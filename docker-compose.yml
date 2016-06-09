@@ -1,0 +1,14 @@
+version: '2'
+services:
+  phpstorm-docker:
+    build: .
+    image: gerardorf/phpstorm
+    container_name: phpstorm
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./home:/home/developer
+volumes:
+  tmp:
+  home:
